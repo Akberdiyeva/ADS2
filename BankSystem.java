@@ -14,7 +14,7 @@ public class BankSystem {
         fixedAccounts[2] = new BankAccount(102, "Alina", 90000);
     }
 
-    // Task 1
+    //1
     public void addAccount(int id, String username, double balance) {
         accounts.add(new BankAccount(id, username, balance));
         System.out.println("Account added");
@@ -35,7 +35,7 @@ public class BankSystem {
         return null;
     }
 
-    // Task 2
+    //2
     public void deposit(String user, double amount) {
         BankAccount acc = findAccount(user);
         if (acc != null) {
@@ -57,7 +57,7 @@ public class BankSystem {
         }
     }
 
-    // Task 3
+    //3
     public void showLastTransaction() {
         if (!history.isEmpty())
             System.out.println("Last: " + history.peek());
@@ -68,7 +68,7 @@ public class BankSystem {
             System.out.println("Undo: " + history.pop());
     }
 
-    // Task 4
+    //4
     public void addBill(String bill) {
         billQueue.add(bill);
         System.out.println("Added: " + bill);
@@ -79,7 +79,7 @@ public class BankSystem {
             System.out.println("Processing: " + billQueue.poll());
     }
 
-    // Task 5
+    //5
     public void addRequest(int id, String user, double bal) {
         accountRequests.add(new BankAccount(id, user, bal));
         System.out.println("Request added");
@@ -93,7 +93,7 @@ public class BankSystem {
         }
     }
 
-    // Task 6
+    //6
     public void showArrayAccounts() {
         System.out.println("Fixed accounts:");
         for (BankAccount acc : fixedAccounts) {

@@ -8,23 +8,18 @@ public class BankAccount {
         this.username = username;
         this.balance = balance;
     }
-
     public int getAccountNumber() {
         return accountNumber;
     }
-
     public String getUsername() {
         return username;
     }
-
     public double getBalance() {
         return balance;
     }
-
     public void deposit(double amount) {
         balance += amount;
     }
-
     public boolean withdraw(double amount) {
         if (balance >= amount) {
             balance -= amount;
@@ -34,7 +29,6 @@ public class BankAccount {
             return false;
         }
     }
-
     public void display() {
         System.out.println(username + " – Balance: " + balance);
     }
